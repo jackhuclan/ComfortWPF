@@ -70,13 +70,13 @@ ComfortWPF is simple Framework for WPF to use MVVM, make WPF application testabl
   - all services and all instances are dominates in container, and will be injected view models automatically,
 
     ```c#
-     [ImportingConstructor]
-            public MainWindowViewModel(IFileOperator fileOperator, IViewModelResolver viewModelResolver, IViewResolver viewResolver)
-            {
-                this.fileOperator = fileOperator;
-                this.viewModelResolver = viewModelResolver;
-                this.viewResolver = viewResolver;
-            }
+    [ImportingConstructor]
+	public MainWindowViewModel(IFileOperator fileOperator, IViewModelResolver viewModelResolver, IViewResolver viewResolver)
+	{
+		this.fileOperator = fileOperator;
+		this.viewModelResolver = viewModelResolver;
+		this.viewResolver = viewResolver;
+	}
     ```
 
     
@@ -107,11 +107,11 @@ ComfortWPF is simple Framework for WPF to use MVVM, make WPF application testabl
   - a typical way to do this is injecting IMessageChannel which is a Message bus once ComfortWPF is initialized. You can inject it by constructor injection or setter injection.
 
     ```C#
-     [ImportingConstructor]
-            public MainWindowViewModel(IMessageChannel  messageChannel)
-            {
-                this.messageChannel = messageChannel;
-            }
+    [ImportingConstructor]
+	public MainWindowViewModel(IMessageChannel  messageChannel)
+	{
+		this.messageChannel = messageChannel;
+	}
     ```
 
   - another easier way to do this is setting a public property to target view model, then give value to this view model.
