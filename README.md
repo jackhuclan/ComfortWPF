@@ -9,7 +9,8 @@ ComfortWPF is simple Framework for WPF to use MVVM, make WPF application testabl
 4. Since all instances are injected via its interface, so they are low-couple and testable.
 5. Make implement SRP principle more easier.
 6. Focus Your business only.
-7. Not complicated as Prism, etc. Just make you comfortable... 
+7. Only one dll is all, don't depend on any third-party libraries.
+8. Not complicated as Prism, etc. Just make you comfortable... 
 
 
 
