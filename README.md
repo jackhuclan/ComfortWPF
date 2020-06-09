@@ -20,7 +20,7 @@ ComfortWPF is simple Framework for WPF to use MVVM, make WPF application testabl
   - Install ComfortWPF via nuget
 
     ```powershell
-    Install-Package ComfortWPF
+    Install-Package ComfortWPF -Version 1.0.0
     ```
 
   - Invoke BootStrapper to register assemblies, then initialize 
