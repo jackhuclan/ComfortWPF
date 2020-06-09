@@ -1,8 +1,7 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("ComfortWPF")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("ComfortWPF is simple Framework for WPF to use MVVM, make WPF application testable, maintainable...")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ODTStudio.Infrastructure")]
