@@ -94,7 +94,7 @@ ComfortWPF is simple Framework for WPF to use MVVM, make WPF application testabl
 
 - how to get arbitrary view model
 
-  - after IViewModelResolver is injected and its view is created, we can get any view model.
+  - after IViewModelResolver is injected and its view is created, we can get view model of this view.
 
     ```c#
     var viewModel = viewModelResolver.Resolve<UserControl1ViewModel>();
@@ -114,7 +114,7 @@ ComfortWPF is simple Framework for WPF to use MVVM, make WPF application testabl
             }
     ```
 
-    
+  - another easier way to do this is setting a public property to target view model, then give value to this view model.
 
   
 
