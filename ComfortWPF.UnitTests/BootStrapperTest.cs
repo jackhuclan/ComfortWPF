@@ -29,6 +29,7 @@ namespace ComfortWPF.Tests
             Assert.IsNotNull(BootStrapper.Container.GetExportedValue<ISaveFileService>());
             Assert.IsNotNull(BootStrapper.Container.GetExportedValue<IViewResolver>());
             Assert.IsNotNull(BootStrapper.Container.GetExportedValue<IViewModelResolver>());
+            BootStrapper.Dispose();
         }
 
         [TestMethod]
@@ -37,6 +38,7 @@ namespace ComfortWPF.Tests
             var importTest = new SetterInjection();
             BootStrapper.Container.SatisfyImportsOnce(importTest);
             Assert.IsNotNull(importTest.DialogService);
+            BootStrapper.Dispose();
         }
 
         [TestMethod]
@@ -46,6 +48,7 @@ namespace ComfortWPF.Tests
             Assert.IsNotNull(constructorInjection);
             Assert.IsNotNull(constructorInjection.DialogService);
             Assert.IsNotNull(constructorInjection.DispatcherService);
+            BootStrapper.Dispose();
         }
     }
 }

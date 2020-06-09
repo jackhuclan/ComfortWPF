@@ -29,6 +29,7 @@ namespace ComfortWPF.Tests
             Assert.IsNotNull(serviceProvider.GetService<ISaveFileService>());
             Assert.IsNotNull(serviceProvider.GetService<IViewResolver>());
             Assert.IsNotNull(serviceProvider.GetService<IViewModelResolver>());
+            BootStrapper.Dispose();
         }
     }
 }
