@@ -83,6 +83,30 @@ ComfortWPF is simple Framework for WPF to use MVVM, make WPF application testabl
 
 - how to get arbitrary view
 
+  - add PartialView Attribute to user control or add PopupView attribute to dialog 
+
+    ```c#
+    [PartialView(typeof(UserControl1))]
+        public partial class UserControl1 : UserControl
+        {
+          public UserControl1()
+            {
+                InitializeComponent();
+            }
+        }
+    
+     [PopupView(typeof(PopupWindow))]
+        public partial class PopupWindow : Window
+        {
+            public PopupWindow()
+            {
+                InitializeComponent();
+            }
+        }
+    ```
+    
+    
+    
   - after IViewResolver is injected, we can get any view.
 
     ```c#
@@ -94,6 +118,22 @@ ComfortWPF is simple Framework for WPF to use MVVM, make WPF application testabl
 
 - how to get arbitrary view model
 
+  - Injected view model to a class, make it as a view model
+
+    ```c#
+    [InjectedViewModel(typeof(PopupWindowViewModel))]
+        public class PopupWindowViewModel : ViewModelBase
+      {
+            [ImportingConstructor]
+            public PopupWindowViewModel()
+            {
+                
+            }
+        }
+    ```
+    
+    
+    
   - after IViewModelResolver is injected and its view is created, we can get view model of this view.
 
     ```c#
