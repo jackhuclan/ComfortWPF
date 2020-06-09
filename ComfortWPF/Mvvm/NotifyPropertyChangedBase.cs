@@ -1,0 +1,28 @@
+﻿using System;
+using System.ComponentModel;
+using System.Linq.Expressions;
+using System.Reflection;
+
+namespace ComfortWPF.Mvvm
+{
+    public class NotifyPropertyChangedBase : INotifyPropertyChanged
+    {
+        protected virtual void OnPropertyChanged<T>(Expression<Func<T>> property)
+        {
+            var propertyInfo = ((MemberExpression)property.Body).Member as PropertyInfo;
+            if (propertyInfo == null)
+            {
+                throw new ArgumentException("The lambda expression 'property' should point to a valid Property");
+            }
+
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyInfo.Name));
+        }
+
+        #region INotifyPropertyChanged Members
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        #endregion
+    }
+}

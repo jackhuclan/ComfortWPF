@@ -1,0 +1,26 @@
+﻿<Window x:Class="ODT.MvvnDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ODT.MvvnDemo"
+        xmlns:mvvm="clr-namespace:ComfortWPF.Mvvm;assembly=ComfortWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        mvvm:ViewModelLocator.ViewModel="ODT.MvvnDemo.ViewModels.MainWindowViewModel">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="{Binding Text}" Width="100" Height="30"/>
+        <StackPanel Grid.Row="1">
+            <Button Content="Add View" Click="Button_Click" Width="100" Height="30"/>
+            <Button Content="Resolve ViewModel" Command="{Binding ResolveViewModelCommand}" Width="100" Height="30"/>
+            <Button Content="PopUp Dialog" Command="{Binding PopupDialogCommand}" Width="100" Height="30"/>
+        </StackPanel>
+        
+        <ContentControl Grid.Row="2" x:Name="cc"/>
+    </Grid>
+</Window>

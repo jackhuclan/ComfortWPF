@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{50B0E76F-1FB1-4BBA-B9DB-A0D5B3277DCF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ComfortWPF</RootNamespace>
+    <AssemblyName>ComfortWPF</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Event\UICompletedEventArgs.cs" />
+    <Compile Include="Extensions\AggregateCatalogExtension.cs" />
+    <Compile Include="Extensions\EnumerableExtension.cs" />
+    <Compile Include="Extensions\ListExtension.cs" />
+    <Compile Include="IO\BinarySerializer.cs" />
+    <Compile Include="IO\DirectoryOperator.cs" />
+    <Compile Include="IO\FileOperator.cs" />
+    <Compile Include="IO\IBinarySerializer.cs" />
+    <Compile Include="IO\IDirectoryOperator.cs" />
+    <Compile Include="IO\IFileOperator.cs" />
+    <Compile Include="IO\IXmlSerializer.cs" />
+    <Compile Include="IO\XmlSerializer.cs" />
+    <Compile Include="Mvvm\BootStrapper.cs" />
+    <Compile Include="Mvvm\CloseRequestEventArgs.cs" />
+    <Compile Include="Mvvm\DelegateCommand.cs" />
+    <Compile Include="Mvvm\InjectedViewModelAttribute.cs" />
+    <Compile Include="Mvvm\IViewModelResolver.cs" />
+    <Compile Include="Mvvm\IViewResolver.cs" />
+    <Compile Include="Mvvm\NotifyPropertyChangedBase.cs" />
+    <Compile Include="Mvvm\ObservableDictionary.cs" />
+    <Compile Include="Mvvm\PartialViewAttribute.cs" />
+    <Compile Include="Mvvm\PopupViewAttribute.cs" />
+    <Compile Include="Mvvm\ViewModelBase.cs" />
+    <Compile Include="Mvvm\ViewModelLocator.cs" />
+    <Compile Include="Mvvm\ViewModelResolver.cs" />
+    <Compile Include="Mvvm\ViewResolver.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\VersionInfo.cs" />
+    <Compile Include="Services\DispatcherService.cs" />
+    <Compile Include="Services\FolderBrowserService.cs" />
+    <Compile Include="Services\IDialogService.cs" />
+    <Compile Include="Services\IDispatcherService.cs" />
+    <Compile Include="Services\IFolderBrowserService.cs" />
+    <Compile Include="Services\IMessageBoxService.cs" />
+    <Compile Include="Services\IMessageChannel.cs" />
+    <Compile Include="Services\IOpenFileService.cs" />
+    <Compile Include="Services\ISaveFileService.cs" />
+    <Compile Include="Services\IServiceProvider.cs" />
+    <Compile Include="Services\MessageChannel.cs" />
+    <Compile Include="Services\ServiceProvider.cs" />
+    <Compile Include="Services\WPFDialogService.cs" />
+    <Compile Include="Services\WPFMessageBoxService.cs" />
+    <Compile Include="Services\WPFOpenFileService.cs" />
+    <Compile Include="Services\WPFSaveFileService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
