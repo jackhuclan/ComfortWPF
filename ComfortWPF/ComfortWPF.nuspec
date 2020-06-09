@@ -2,6 +2,7 @@
 <package >
   <metadata>
     <id>ComfortWPF</id>
+    <title>ComfortWPF</title>
     <version>1.0.0</version>
     <authors>georgehu</authors>
     <owners>georgehu</owners>

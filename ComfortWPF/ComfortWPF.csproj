@@ -91,5 +91,9 @@
     <Compile Include="Services\WPFOpenFileService.cs" />
     <Compile Include="Services\WPFSaveFileService.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="build.cmd" />
+    <None Include="ComfortWPF.nuspec" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
