@@ -2,7 +2,7 @@
 using ComfortWPF.Mvvm;
 using System.Windows;
 
-namespace ODT.MvvnDemo
+namespace ComfortWPF.Demo
 {
     /// <summary>
     /// Interaction logic for App.xaml

@@ -1,7 +1,7 @@
 ﻿using ComfortWPF.Mvvm;
 using System.Windows.Controls;
 
-namespace ODT.MvvnDemo
+namespace ComfortWPF.Demo
 {
     [PartialView(typeof(UserControl1))]
     public partial class UserControl1 : UserControl

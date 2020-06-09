@@ -1,6 +1,6 @@
 ﻿using ComfortWPF.Mvvm;
 
-namespace ODT.MvvnDemo.ViewModels
+namespace ComfortWPF.Demo.ViewModels
 {
     [InjectedViewModel(typeof(UserControl1ViewModel))]
     public class UserControl1ViewModel : ViewModelBase

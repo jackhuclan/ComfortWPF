@@ -1,7 +1,7 @@
 ﻿using ComfortWPF.Mvvm;
 using System.ComponentModel.Composition;
 
-namespace ODT.MvvnDemo.ViewModels
+namespace ComfortWPF.Demo.ViewModels
 {
     [InjectedViewModel(typeof(PopupWindowViewModel))]
     public class PopupWindowViewModel : ViewModelBase

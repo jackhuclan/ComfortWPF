@@ -2,7 +2,7 @@
 using ComfortWPF.Mvvm;
 using System.ComponentModel.Composition;
 
-namespace ODT.MvvnDemo.ViewModels
+namespace ComfortWPF.Demo.ViewModels
 {
     [InjectedViewModel(typeof(MainWindowViewModel))]
     public class MainWindowViewModel : ViewModelBase

@@ -1,7 +1,7 @@
 ﻿using ComfortWPF.Mvvm;
 using System.Windows;
 
-namespace ODT.MvvnDemo
+namespace ComfortWPF.Demo
 {
     [PopupView(typeof(PopupWindow))]
     public partial class PopupWindow : Window
