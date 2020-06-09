@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package >
-  <metadata>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+  <metadata minClientVersion="3.0">
     <id>ComfortWPF</id>
     <title>ComfortWPF</title>
     <version>1.0.0</version>
@@ -11,7 +11,6 @@
     <projectUrl>https://github.com/jackhuclan/ComfortWPF.git</projectUrl>
     <iconUrl>https://github.com/jackhuclan/ComfortWPF/blob/master/images/icon.png</iconUrl>
     <description>ComfortWPF is simple Framework for WPF to use MVVM, make WPF application testable, maintainable...</description>
-    <releaseNotes>publish.</releaseNotes>
     <copyright>Copyright 2020</copyright>
     <tags>WPF MVVM</tags>
   </metadata>
